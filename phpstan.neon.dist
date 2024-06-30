@@ -1,0 +1,14 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+
+    paths:
+        - app/
+        
+    excludePaths:
+        analyse:
+            - tests
+
+
+    level: 5

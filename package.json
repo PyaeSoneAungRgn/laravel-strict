@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "devDependencies": {
+    "axios": "^1.6.4",
+    "husky": "^9.0.11",
+    "laravel-vite-plugin": "^1.0",
+    "lint-staged": "^15.2.7",
+    "vite": "^5.0"
+  },
+  "lint-staged": {
+    "*.php": [
+      "./vendor/bin/rector process",
+      "./vendor/bin/pint",
+      "./vendor/bin/phpstan analyse",
+      "./vendor/bin/pest"
+    ],
+    "phpstan.neon.dist": "./vendor/bin/phpstan analyse"
+  }
+}
