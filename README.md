@@ -30,6 +30,14 @@ Clone the Repository
 git clone https://github.com/PyaeSoneAungRgn/laravel-strict.git
 ```
 
+Setup Project
+
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+```
+
 Setup Husky
 
 ```
