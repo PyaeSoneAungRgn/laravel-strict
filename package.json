@@ -16,10 +16,9 @@
   },
   "lint-staged": {
     "*.php": [
-      "./vendor/bin/rector process",
+      "./vendor/bin/rector",
       "./vendor/bin/pint",
-      "./vendor/bin/phpstan analyse",
-      "./vendor/bin/pest"
+      "./vendor/bin/phpstan analyse"
     ],
     "phpstan.neon.dist": "./vendor/bin/phpstan analyse"
   }
