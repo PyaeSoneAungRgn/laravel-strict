@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "prepare": "husky install",
-    "pre-commit": "lint-staged"
+    "pre-commit": "./vendor/bin/rector && ./vendor/bin/phpstan analyse --memory-limit 4048M && lint-staged"
   },
   "devDependencies": {
     "axios": "^1.6.4",
@@ -16,10 +16,7 @@
   },
   "lint-staged": {
     "*.php": [
-      "./vendor/bin/rector",
-      "./vendor/bin/pint",
-      "./vendor/bin/phpstan analyse"
-    ],
-    "phpstan.neon.dist": "./vendor/bin/phpstan analyse"
+      "./vendor/bin/pint"
+    ]
   }
 }
